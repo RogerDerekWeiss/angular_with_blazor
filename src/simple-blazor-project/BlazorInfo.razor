@@ -1,0 +1,9 @@
+﻿@using JSComponentGeneration.Angular
+@attribute [GenerateAngular]
+
+<h3>Blazor Info Component</h3>
+<p>@Message</p>
+
+@code {
+    [Parameter] public string Message { get; set; } = "Default Message";
+}
