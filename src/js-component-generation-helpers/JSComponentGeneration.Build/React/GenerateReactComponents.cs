@@ -12,6 +12,9 @@ namespace JSComponentGeneration.Build.React
         private const string BlazorHelperFile = "blazor-react.js";
 
         [Required]
+        public string MSBuildThisFileDirectory { get; set; }
+        
+        [Required]
         public string OutputPath { get; set; }
 
         [Required]
@@ -57,7 +60,7 @@ namespace JSComponentGeneration.Build.React
             {
                 try
                 {
-                    var blazorComponentSourcePath = $"{OutputPath}/js/{BlazorHelperFile}";
+                    var blazorComponentSourcePath = $"{MSBuildThisFileDirectory}/js/{BlazorHelperFile}";
                     File.Copy(blazorComponentSourcePath, blazorHelperDestinationPath);
                 }
                 catch (Exception e)

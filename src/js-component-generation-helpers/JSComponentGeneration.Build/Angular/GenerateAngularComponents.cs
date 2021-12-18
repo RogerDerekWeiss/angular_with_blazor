@@ -12,6 +12,9 @@ namespace JSComponentGeneration.Build.Angular
         private const string BlazorAdapterComponentName = "blazor-adapter";
 
         [Required]
+        public string MSBuildThisFileDirectory { get; set; }
+        
+        [Required]
         public string OutputPath { get; set; }
 
         [Required]
@@ -54,12 +57,14 @@ namespace JSComponentGeneration.Build.Angular
             var blazorComponentFile = $"{BlazorAdapterComponentName}.component.ts";
             var blazorComponentDestinationFolder = $"{JavaScriptComponentOutputDirectory}/{BlazorAdapterComponentName}";
             var blazorComponentDestinationPath = $"{blazorComponentDestinationFolder}/{blazorComponentFile}";
+            
+            Log.LogMessage($"Properties => MSBuildThisFileDirectory: {MSBuildThisFileDirectory}");
 
             if (!File.Exists(blazorComponentDestinationPath))
             {
                 try
                 {
-                    var blazorComponentSourcePath = $"{OutputPath}/js/{blazorComponentFile}";
+                    var blazorComponentSourcePath = $"{MSBuildThisFileDirectory}../../bin/Debug/netstandard2.0/js/{blazorComponentFile}";
                     Directory.CreateDirectory(blazorComponentDestinationFolder);
                     File.Copy(blazorComponentSourcePath, blazorComponentDestinationPath);
                 }
