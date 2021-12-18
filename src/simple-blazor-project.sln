@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple-blazor-project", "simple-blazor-project\simple-blazor-project.csproj", "{25F104C9-F492-4E91-B785-54FF0B2CB82D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js-component-generation-helpers", "js-component-generation-helpers", "{76A70E8A-0E49-4375-B630-0197558C515D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSComponentGeneration", "js-component-generation-helpers\JSComponentGeneration\JSComponentGeneration.csproj", "{844BAF82-5E72-43E6-82C4-8C44C8B6B957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSComponentGeneration.Build", "js-component-generation-helpers\JSComponentGeneration.Build\JSComponentGeneration.Build.csproj", "{46D7C814-3F14-4A80-96FD-0EB8F75422E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25F104C9-F492-4E91-B785-54FF0B2CB82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F104C9-F492-4E91-B785-54FF0B2CB82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F104C9-F492-4E91-B785-54FF0B2CB82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F104C9-F492-4E91-B785-54FF0B2CB82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844BAF82-5E72-43E6-82C4-8C44C8B6B957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844BAF82-5E72-43E6-82C4-8C44C8B6B957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844BAF82-5E72-43E6-82C4-8C44C8B6B957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844BAF82-5E72-43E6-82C4-8C44C8B6B957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D7C814-3F14-4A80-96FD-0EB8F75422E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D7C814-3F14-4A80-96FD-0EB8F75422E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D7C814-3F14-4A80-96FD-0EB8F75422E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D7C814-3F14-4A80-96FD-0EB8F75422E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{844BAF82-5E72-43E6-82C4-8C44C8B6B957} = {76A70E8A-0E49-4375-B630-0197558C515D}
+		{46D7C814-3F14-4A80-96FD-0EB8F75422E6} = {76A70E8A-0E49-4375-B630-0197558C515D}
+	EndGlobalSection
+EndGlobal

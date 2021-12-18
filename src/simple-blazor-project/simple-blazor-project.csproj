@@ -1,5 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
-
+  <PropertyGroup>
+    <AngularProjectRoot>eee</AngularProjectRoot>
+  </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -11,5 +13,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\js-component-generation-helpers\JSComponentGeneration\JSComponentGeneration.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\js-component-generation-helpers\JSComponentGeneration.Build\build\netstandard2.0\JSComponentGeneration.build.targets" />
 
 </Project>
