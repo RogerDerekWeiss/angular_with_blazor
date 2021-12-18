@@ -55,7 +55,32 @@ This step will create a standard Blazor Component and mark it with an Attribute 
 1. Add the following line to the builder ```builder.RootComponents.RegisterForAngular<BlazorInfo>();```
 
 
-#### 2.6 Create a solution for the .NET projects (Optional)
+#### 2.6 Build the simple-blazor-project project 
+From the _simple-blazor-project_ folder
+```dotnet build```
+
+#### 2.7 Integrator Blazor Components to Angular App
+Add the newly generated components to _app.module.ts_ by addign the following lines:
+```typescript
+import { BlazorInfoComponent } from "./blazor-info/blazor-info.component";
+```
+In the declarations section:
+```typescript
+BlazorInfoComponent
+```
+In _index.html_ add the following script above the closing `body` tag
+```javscript
+  <script src="_framework/blazor.webassembly.js"></script>
+```
+Create a file _proxy.conf.json_ and  the angular _src_ folder
+```json
+{
+    "/": { "target": "https://localhost:7025/", "secure": false }
+}
+```
+> Note that `"secure"` values is _false_ above otherwise you will get a  DEPTH_ZERO_SELF_SIGNED_CERT error while proxying the request
+
+#### 2.x Create a solution for the .NET projects (Optional)
 From the **/src** folder:
 1. ```dotnet new sln --name simple-blazor-project```
 1. ```dotnet sln add simple-blazor-project/simple-blazor-project.csproj```
