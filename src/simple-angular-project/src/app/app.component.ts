@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'simple-angular-project';
+  blazorComponentVisible: boolean;
+
+  constructor() {
+    this.blazorComponentVisible = false;
+  }
+
+  toggleBlazorComponentVisibility() {
+    this.blazorComponentVisible = !this.blazorComponentVisible
+  }
 }
