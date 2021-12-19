@@ -414,7 +414,10 @@
 
   <div>
     <app-info></app-info>
-    <blazor-info [message]="title"></blazor-info>
+    <button (click)="toggleBlazorComponentVisibility()">Toggle Blazor Component</button>
+    <div *ngIf="blazorComponentVisible">
+      <blazor-info [message]="title"></blazor-info>
+    </div>
   </div>
 
   <!-- Terminal -->
